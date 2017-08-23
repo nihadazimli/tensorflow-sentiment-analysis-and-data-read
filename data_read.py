@@ -23,7 +23,7 @@ def init_process(fin, fout):
         Creates:
             csv file named fout
     """
-    outfile = open(fout, 'a')
+    outfile = open(fout, 'a', encoding='latin-1')
     with open(fin, buffering=200000, encoding='latin-1') as f:
         csvreader = csv.reader(f, quotechar='"')
         for line in csvreader:
